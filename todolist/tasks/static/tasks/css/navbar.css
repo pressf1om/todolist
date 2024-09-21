@@ -1,0 +1,57 @@
+/* Стиль для темной шапки */
+.navbar {
+    background-color: #212529; /* Темный фон */
+    padding: 10px 20px; /* Просторные отступы */
+}
+
+.navbar-brand {
+    color: #b1f4a3; /* Цвет логотипа (светло-зеленый) */
+    font-size: 1.5rem; /* Увеличенный размер шрифта */
+    font-weight: bold; /* Жирный шрифт */
+    letter-spacing: 2px; /* Интервал между буквами */
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Отступ между логотипом и текстом */
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar-nav .nav-item {
+    margin-left: 20px; /* Отступы между ссылками */
+}
+
+.navbar-nav .nav-link {
+    color: #b1f4a3; /* Цвет текста ссылок (светло-зеленый) */
+    font-size: 1.1rem; /* Увеличенный шрифт */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; /* Цвет текста при наведении */
+}
+
+.navbar-nav .btn-light {
+    color: #212529; /* Цвет текста кнопки Войти */
+    background-color: #b1f4a3; /* Светло-зеленый фон кнопки */
+    border-radius: 4px; /* Скругленные края */
+}
+
+.navbar-nav .btn-light:hover {
+    background-color: #a3e6a3; /* Цвет кнопки при наведении */
+}
+
+/* Стиль для красной кнопки Выйти */
+.navbar-nav .btn-danger {
+    background-color: #dc3545; /* Красный фон */
+    color: #fff; /* Белый текст */
+    border: none; /* Убираем границу */
+    border-radius: 4px; /* Скругленные углы */
+}
+
+.navbar-nav .btn-danger:hover {
+    background-color: #c82333; /* Темно-красный цвет при наведении */
+}

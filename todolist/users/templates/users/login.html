@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Войти{% endblock %}
+{% block content %}
+  <div>
+    <h2>Войти</h2>
+
+    <!-- Отображение ошибок формы -->
+    {% if form.errors %}
+      <div style="color: red;">
+        {% for field in form %}
+          {% for error in field.errors %}
+            <p>{{ error|escape }}</p>
+          {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+          <p>{{ error|escape }}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <!-- Форма входа -->
+    <form method="post" action="{% url 'users:login' %}">
+      {% csrf_token %}
+
+      <!-- Поля формы -->
+      {% for field in form %}
+        <div>
+          <label for="{{ field.id_for_label }}">
+            {{ field.label }}
+            {% if field.field.required %}
+              <span style="color: red;">*</span>
+            {% endif %}
+          </label>
+          {{ field }}
+          {% if field.help_text %}
+            <small id="{{ field.id_for_label }}-help">
+              {{ field.help_text|safe }}
+            </small>
+          {% endif %}
+        </div>
+      {% endfor %}
+
+      <div>
+        <button type="submit">
+          Войти
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}
