@@ -1,0 +1,68 @@
+/* Общий стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #b1f4a3;
+    background-color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #2a2f33;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #b1f4a3;
+}
+
+/* Ошибки */
+.error-message p {
+    color: #ff6b6b;
+}
+
+/* Стиль формы */
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b1f4a3;
+}
+
+.form-help-text {
+    color: #d4edda;
+    font-size: 0.9rem;
+}
+
+/* Стиль для обязательного поля */
+.required {
+    color: #ff6b6b;
+}
+
+/* Стиль кнопки */
+.btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #b1f4a3;
+    color: #212529;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #a3e6a3;
+}
