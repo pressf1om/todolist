@@ -1,0 +1,32 @@
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Ignore environment variables:
+.env
+
+# macOS system files
+.DS_Store
+
+# Virtual environments
+venv/
+env/
+ENV/
+.virtualenv/
+
+# pyenv
+.python-version
+
+# PyCharm settings
+.idea/
+
+# Логи и отладочные файлы
+*.log
+*.bak
+*.swp
+*.tmp
