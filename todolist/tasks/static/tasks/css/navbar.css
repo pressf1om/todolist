@@ -1,57 +1,94 @@
-/* Стиль для темной шапки */
+/* Общий стиль шапки */
 .navbar {
-    background-color: #212529; /* Темный фон */
-    padding: 10px 20px; /* Просторные отступы */
+    background: linear-gradient(90deg, #212529 0%, #2e2e2e 100%); /* Темный градиент для фона */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Добавляем легкую тень */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Центрируем элементы по вертикали */
 }
 
 .navbar-brand {
-    color: #b1f4a3; /* Цвет логотипа (светло-зеленый) */
-    font-size: 1.5rem; /* Увеличенный размер шрифта */
-    font-weight: bold; /* Жирный шрифт */
-    letter-spacing: 2px; /* Интервал между буквами */
-}
-
-.navbar-brand img {
-    margin-right: 10px; /* Отступ между логотипом и текстом */
+    color: #b1f4a3; /* Логотип и текст */
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
 .navbar-nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; /* Располагаем ссылки в строку */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-nav .nav-item {
-    margin-left: 20px; /* Отступы между ссылками */
+    margin-left: 20px; /* Отступы между пунктами */
 }
 
 .navbar-nav .nav-link {
-    color: #b1f4a3; /* Цвет текста ссылок (светло-зеленый) */
-    font-size: 1.1rem; /* Увеличенный шрифт */
+    color: #b1f4a3; /* Стандартный цвет текста ссылок */
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 6px;
+    text-align: center; /* Центрируем текст */
+    display: block; /* Чтобы ссылкам было удобнее применять отступы */
+    text-decoration: none; /* Убираем подчеркивание */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #fff; /* Цвет текста при наведении */
+    color: #f8f9fa; /* Белый текст при наведении */
+    background-color: #343a40; /* Темный фон при наведении */
 }
 
-.navbar-nav .btn-light {
-    color: #212529; /* Цвет текста кнопки Войти */
-    background-color: #b1f4a3; /* Светло-зеленый фон кнопки */
-    border-radius: 4px; /* Скругленные края */
+/* Активная ссылка */
+.navbar-nav .nav-item.active .nav-link {
+    background-color: #b1f4a3; /* Светло-зеленый фон активной ссылки */
+    color: #4b4b4b; /* Серый текст для лучшей читаемости */
+    font-weight: bold;
 }
 
-.navbar-nav .btn-light:hover {
-    background-color: #a3e6a3; /* Цвет кнопки при наведении */
-}
-
-/* Стиль для красной кнопки Выйти */
+/* Кнопка "Выйти" */
 .navbar-nav .btn-danger {
-    background-color: #dc3545; /* Красный фон */
-    color: #fff; /* Белый текст */
-    border: none; /* Убираем границу */
-    border-radius: 4px; /* Скругленные углы */
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
 }
 
 .navbar-nav .btn-danger:hover {
-    background-color: #c82333; /* Темно-красный цвет при наведении */
+    background-color: #c82333;
+}
+
+/* Стиль футера */
+.footer {
+    background: linear-gradient(90deg, #212529 0%, #2e2e2e 100%); /* Темный градиент для фона */
+    color: #e0e0e0; /* Светло-серый текст */
+    padding: 20px 0;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #b1f4a3; /* Светло-зеленый заголовок */
+}
+
+.footer-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0; /* Светло-серый текст */
+}
+
+.footer-icon img {
+    transition: transform 0.3s;
+}
+
+.footer-icon img:hover {
+    transform: scale(1.1); /* Легкое увеличение иконок при наведении */
 }

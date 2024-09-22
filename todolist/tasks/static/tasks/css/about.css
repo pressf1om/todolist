@@ -1,0 +1,51 @@
+/* Общий стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #b1f4a3;
+    background-color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль секции О нас */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2a2f33;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Стиль заголовка */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #b1f4a3;
+}
+
+/* Стиль параграфов */
+.about-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #d4edda;
+}
+
+/* Стиль списка */
+.about-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-list li {
+    font-size: 1.1rem;
+    color: #b1f4a3;
+    margin: 10px 0;
+    background-color: #343a40;
+    padding: 10px;
+    border-radius: 5px;
+}

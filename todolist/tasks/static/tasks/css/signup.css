@@ -1,0 +1,61 @@
+/* Общий стиль контейнера формы */
+.registration-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2a2f33;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.form-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-errors {
+    color: red;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group .form-text {
+    font-size: 0.875rem;
+    color: #6c757d; /* Серый цвет для подсказок */
+}
+
+.form-group .required {
+    color: red;
+}
+
+.btn-primary {
+    background-color: #b1f4a3;
+    color: #212529;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}

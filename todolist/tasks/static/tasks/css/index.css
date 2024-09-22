@@ -1,0 +1,66 @@
+/* Общий стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #b1f4a3; /* Светло-зеленый цвет текста */
+    background-color: #212529; /* Темный фон */
+    margin: 0;
+    padding: 0;
+}
+
+/* Стиль секции главной страницы */
+.main-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #2a2f33; /* Темно-зеленый фон */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Стиль заголовка */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #b1f4a3; /* Светло-зеленый цвет заголовка */
+}
+
+/* Стиль параграфов */
+.main-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #d4edda; /* Светло-зеленый текст */
+}
+
+/* Стиль блоков информации */
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-item {
+    background-color: #343a40; /* Темный фон для блоков */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для блоков */
+}
+
+/* Стиль подзаголовков и текста внутри блоков */
+.info-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #b1f4a3; /* Светло-зеленый цвет подзаголовков */
+}
+
+.info-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d4edda; /* Светло-зеленый текст для содержимого */
+}
