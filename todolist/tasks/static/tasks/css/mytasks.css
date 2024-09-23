@@ -1,0 +1,76 @@
+/* Центрирование и стили для контейнера списка задач */
+.task-list-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212529; /* Темный фон */
+}
+
+.task-list-container {
+    background-color: #2a2f33; /* Темно-зеленый фон */
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+
+/* Заголовок списка задач */
+.task-list-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #b1f4a3; /* Светло-зеленый заголовок */
+    text-align: center;
+}
+
+/* Стили для списка задач */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: #343a40; /* Темный фон для задач */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: #d4edda; /* Светло-зеленый текст */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок задачи */
+.task-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #b1f4a3; /* Светло-зеленый цвет для заголовков задач */
+}
+
+/* Описание и статус задачи */
+.task-description, .task-status, .task-deadline {
+    margin-bottom: 10px;
+    color: #d4edda; /* Светло-зеленый текст */
+}
+
+/* Кнопка редактирования */
+.btn-edit {
+    background-color: #3e6f63;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-actions{
+    margin-top: 30px;
+}
+
+.btn-edit:hover {
+    background-color: #2f7a6e; /* Изменение цвета при наведении */
+}

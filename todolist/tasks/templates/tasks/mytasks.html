@@ -1,26 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5">
-    <h2>Мои задачи</h2>
-    <ul class="list-group">
-        {% for task in tasks %}
-        <li class="list-group-item">
-            <h5>{{ task.title }}</h5>
-            <p>{{ task.description }}</p>
-            <p>Статус: {% if task.status %} Выполнено {% else %} Не выполнено {% endif %}</p>
-            <p>Дедлайн: {{ task.deadline|date:"d.m.Y H:i" }}</p>
+<div class="task-list-wrapper">
+    <div class="task-list-container">
+        <h2 class="task-list-title">Мои задачи</h2>
+        <ul class="task-list">
+            {% for task in tasks %}
+            <li class="task-item">
+                <h5 class="task-title">{{ task.title }}</h5>
+                <p class="task-description">{{ task.description }}</p>
+                <p class="task-status">
+                    <strong>Статус:</strong> {% if task.status %} Выполнено {% else %} Не выполнено {% endif %}
+                </p>
+                <p class="task-deadline"><strong>Дедлайн:</strong> {{ task.deadline|date:"d.m.Y H:i" }}</p>
 
-            {% if user == task.user %}
-            <div class="d-flex justify-content-end mt-3">
-                <a href="{% url 'tasks:edit_task' task.id %}" class="btn btn-secondary">
-                    Редактировать
-                </a>
-            </div>
-            {% endif %}
-        </li>
-        {% empty %}
-        <li class="list-group-item">У вас нет задач.</li>
-        {% endfor %}
-    </ul>
+                {% if user == task.user %}
+                <div class="task-actions">
+                    <a href="{% url 'tasks:edit_task' task.id %}" class="btn-edit">Редактировать</a>
+                </div>
+                {% endif %}
+            </li>
+            {% empty %}
+            <li class="task-item">У вас нет задач.</li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {% endblock %}

@@ -1,0 +1,56 @@
+/* Центрирование и стили для профиля */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212529; /* Темный фон */
+}
+
+.profile-container {
+    margin-top: -150px;
+    background-color: #2a2f33; /* Темно-зеленый фон */
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    text-align: center;
+}
+
+/* Заголовок профиля */
+.profile-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #b1f4a3; /* Светло-зеленый заголовок */
+}
+
+/* Информация о пользователе */
+.profile-info p {
+    font-size: 1.2rem;
+    color: #d4edda; /* Светло-зеленый текст */
+    margin-bottom: 15px;
+}
+
+/* Кнопки для профиля */
+.profile-actions {
+    margin-top: 20px;
+}
+
+.btn-edit-profile, .btn-logout {
+    display: inline-block;
+    background-color: #3e6f63;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-edit-profile:hover, .btn-logout:hover {
+    background-color: #2f7a6e; /* Изменение цвета при наведении */
+}

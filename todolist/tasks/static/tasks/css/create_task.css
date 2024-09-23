@@ -1,0 +1,81 @@
+/* Центрирование формы на странице */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Центрирование по вертикали */
+    background-color: #212529; /* Темный фон */
+}
+
+/* Контейнер для формы */
+.form-container {
+    background-color: #2a2f33; /* Темно-зеленый фон */
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Ограничение ширины блока */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Легкая тень для контейнера */
+}
+
+/* Заголовок формы */
+.form-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #b1f4a3; /* Светло-зеленый цвет заголовка */
+    text-align: center;
+}
+
+/* Форма */
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-form input, .task-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #3e6f63;
+    background-color: #343a40; /* Темный фон для полей ввода */
+    color: #d4edda; /* Светло-зеленый цвет текста */
+}
+
+.task-form input::placeholder, .task-form textarea::placeholder {
+    color: #8fae94; /* Светло-зеленый для плейсхолдера */
+}
+
+.task-form input:focus, .task-form textarea:focus {
+    outline: none;
+    border-color: #b1f4a3;
+    box-shadow: 0 0 5px rgba(177, 244, 163, 0.5); /* Подсветка при фокусе */
+}
+
+/* Кнопка отправки */
+.btn-submit {
+    background-color: #3e6f63;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2f7a6e; /* Более яркий оттенок при наведении */
+}
+
+/* Ссылка "Назад" */
+.back-link {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #5ac1a1;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
