@@ -26,7 +26,7 @@ def guide(request):
     return render(request, 'tasks/guide.html', context)
 
 
-@login_required()
+@login_required
 def create_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
