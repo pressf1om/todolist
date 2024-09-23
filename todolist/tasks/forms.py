@@ -1,14 +1,15 @@
 from django import forms
 from .models import Task
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 
 class TaskForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ['title', 'description', 'status', 'deadline']
+        fields = ['title', 'description', 'deadline']
         labels = {
             'title': 'Название задачи',
             'description': 'Описание',
-            'status': 'Статус (выполнено/не выполнено)',
             'deadline': 'Срок выполнения',
         }
         widgets = {

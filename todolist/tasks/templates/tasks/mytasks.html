@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+
 {% block content %}
 <div class="task-list-wrapper">
     <div class="task-list-container">
@@ -9,13 +10,26 @@
                 <h5 class="task-title">{{ task.title }}</h5>
                 <p class="task-description">{{ task.description }}</p>
                 <p class="task-status">
-                    <strong>Статус:</strong> {% if task.status %} Выполнено {% else %} Не выполнено {% endif %}
+                    <strong>Статус:</strong> {% if task.status %}
+                    <span class="text-success">&#10004; Выполнено</span>
+                    {% else %}
+                    Не выполнено
+                    <p class="task-deadline"><strong>Дедлайн:</strong> {{ task.deadline|date:"d.m.Y H:i" }}</p>
+                    {% endif %}
                 </p>
-                <p class="task-deadline"><strong>Дедлайн:</strong> {{ task.deadline|date:"d.m.Y H:i" }}</p>
+
 
                 {% if user == task.user %}
                 <div class="task-actions">
                     <a href="{% url 'tasks:edit_task' task.id %}" class="btn-edit">Редактировать</a>
+
+                    {% if not task.status %}
+                    <!-- Кнопка "Отметить как выполненно" -->
+                    <form method="post" action="{% url 'tasks:completed_task' task.id %}" class="mark-complete-form">
+                        {% csrf_token %}
+                        <button type="submit" class="btn-complete">Отметить как выполненно</button>
+                    </form>
+                    {% endif %}
                 </div>
                 {% endif %}
             </li>

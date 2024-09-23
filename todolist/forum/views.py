@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import ForumPost
 from .forms import CommentForm, PostForm
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def forum_index(request):
     posts = ForumPost.objects.all()
     comment_form = CommentForm()
@@ -12,6 +14,7 @@ def forum_index(request):
     })
 
 
+@login_required
 def post_detail(request, pk):
     post = get_object_or_404(ForumPost, pk=pk)
     comments = post.comments.all()
@@ -33,6 +36,8 @@ def post_detail(request, pk):
         'comment_form': form,
     })
 
+
+@login_required
 def create_post(request):
     if request.method == 'POST':
         form = PostForm(request.POST)

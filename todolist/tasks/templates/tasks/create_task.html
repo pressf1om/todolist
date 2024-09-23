@@ -3,12 +3,33 @@
 <div class="form-wrapper">
     <div class="form-container">
         <h2 class="form-title">Создание задачи</h2>
+
+        <!-- Если есть ошибки, они будут отображены здесь -->
+        {% if form.errors %}
+        <div class="alert alert-danger">
+            <ul>
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <li>{{ field.label }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Форма для создания задачи -->
         <form method="post" class="task-form">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="btn-submit">Создать</button>
         </form>
+
+        <!-- Ссылка для возврата к списку задач -->
         <a href="{% url 'tasks:mytasks' %}" class="back-link">Назад</a>
     </div>
 </div>
 {% endblock %}
+
