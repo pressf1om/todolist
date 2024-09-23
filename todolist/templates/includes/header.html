@@ -22,6 +22,9 @@
                         <li class="nav-item {% if view_name == 'tasks:guide' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'tasks:guide' %}">Гайд по заданиям</a>
                         </li>
+                        <li class="nav-item {% if view_name == 'forum:forum_index' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'forum:forum_index' %}">Форум</a>
+                        </li>
 
                         {% if user.is_authenticated %}
                             <li class="nav-item">

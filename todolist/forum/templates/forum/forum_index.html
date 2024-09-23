@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="forum-container">
+        <h1>Форум</h1>
+        <a href="{% url 'forum:create_post' %}" class="btn btn-primary">Создать пост</a>
+        <ul class="post-list">
+            {% for post in posts %}
+                <li class="post-item">
+                    <h2>{{ post.title }}</h2>
+                    <p class="post-content">{{ post.content }}</p>
+                    <p class="post-author"><strong>Автор:</strong> {{ post.author }}</p>
+                    <a href="{% url 'forum:post_detail' post.pk %}" class="btn btn-secondary">Просмотреть пост</a>
+                    <ul class="comment-list">
+                        {% for comment in post.comments.all %}
+                            <li class="comment-item">
+                                <p><strong>{{ comment.author }}</strong>: {{ comment.content }}</p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
